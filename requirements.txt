@@ -1,0 +1,29 @@
+# Core data handling
+pandas
+numpy
+tqdm
+
+# Knowledge graph
+neo4j
+
+# NLP / triple extraction
+spacy
+
+# Semantic fallback embeddings
+sentence-transformers
+scikit-learn
+
+# Hugging Face models: MiniLM, DeBERTa NLI, Qwen verifier
+transformers
+torch
+accelerate
+huggingface-hub
+safetensors
+
+
+
+# LangChain Wikipedia fallback extension
+langchain
+langchain-community
+wikipedia
+
