@@ -56,42 +56,7 @@ Silent overconfidence when evidence is missing. That's the exact failure mode Fa
 
 FactGraph sits between the LLM annotation and the final label. It independently verifies each claim using a Wikidata-derived knowledge graph, and corrects the LLM when the evidence says otherwise.
 
-```
-FEVER Claim
-    │
-    ▼
-LLaMA Baseline Annotator          ← direct LLM label (no evidence)
-    │
-    ▼
-Claim Triple Extraction           ← spaCy NER + dependency parsing
-    │
-    ▼
-Property Mapping                  ← relation → Wikidata-style property ID
-    │
-    ▼
-Neo4j KG Query ──── match? ──── Yes ──► KG Evidence
-                        │
-                        No
-                        ▼
-              Semantic Fallback   ← sentence-transformers cosine similarity
-                        │
-                        ▼
-              Retrieved Evidence
-                        │
-                        ▼
-         Evidence Verbalizer      ← triple → natural language sentence
-                        │
-                        ▼
-      DeBERTa NLI / Qwen Verifier ← evidence vs. claim
-                        │
-                        ▼
-    Final Label: SUPPORTS / REFUTES / NOT_ENOUGH_INFO
-                        │
-                        ▼
-         Rescue Evaluation        ← LLM wrong → KG right: 62.44%
-```
-
-![FactGraph Pipeline](factgraph_pipeline.png)
+![FactGraph Pipeline](factgraph_pipeline2.png)
 
 ---
 
