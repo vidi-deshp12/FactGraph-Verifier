@@ -111,8 +111,8 @@ Properties fetched: date of birth, place of birth, country of citizenship, occup
 
 | File | Role |
 |---|---|
-| `build_kg_facts.py` | Extract frequent FEVER entities, fetch Wikidata facts, load into Neo4j |
-| `load_kg.py` | Neo4j loading utilities |
+| `build_kg_facts.py` | Extract frequent FEVER entities, fetch Wikidata facts |
+| `load_kg.py` | Load into Neo4j |
 | `extract_claims.py` | spaCy NER + dependency parsing → subject–relation–object triple |
 | `query_kg.py` | Exact match and property-based retrieval from Neo4j |
 | `sem_fallback.py` | Semantic fallback via sentence-transformers cosine similarity |
