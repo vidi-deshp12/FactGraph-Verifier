@@ -1,4 +1,4 @@
-# FactGraph — Reducing Hallucinated LLM Annotations with Knowledge Graph Verification
+# FactGraph : Reducing Hallucinated LLM Annotations with Knowledge Graph Verification
 
 > A Neo4j + Semantic Retrieval + NLI/LLM Verifier pipeline for FEVER claim labeling.  
 > NLP Course Project · CSE 538 · Stony Brook University · May 2026
